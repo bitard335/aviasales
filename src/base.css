@@ -1,0 +1,26 @@
+body {
+  background-color: #F3F7FA;
+  color: #4A4A4A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Open Sans Semibold";
+}
+
+
+body, button, input, ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none
+}
+
+code {
+font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+ul {
+  list-style: none;
+}

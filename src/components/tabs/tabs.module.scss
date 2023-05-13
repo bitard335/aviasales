@@ -1,0 +1,51 @@
+$borderColor: rgba(223, 229, 236, 1);
+$checkedTabBackColor: rgba(33, 150, 243, 1);
+$checkedTabFontColor: #FFFFFF;
+$tabBackground : #FFFFFF;
+
+.tabs {
+  box-sizing: border-box;
+  display: flex;
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+  width: 502px;
+  
+  background-color: $tabBackground;
+
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+  }
+
+  &__tab {
+    flex-grow: 1;
+    transition-duration: 500ms;
+    
+    display: block;
+    height: 50px;
+    text-align: center;
+
+    border-right: 1px solid $borderColor;
+
+    &:has( input:checked) {
+      background-color: $checkedTabBackColor;
+      color: $checkedTabFontColor;
+    }
+
+    & label {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+    & span {
+      margin: auto auto;
+    }
+    & input {
+      display: none;
+
+    }
+  }
+}
