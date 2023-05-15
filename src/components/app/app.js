@@ -1,13 +1,9 @@
-import { useState } from 'react';
-
 import Filter from '../filter/filter';
 import TicketList from '../ticketList/ticketList';
 
 import cl from './app.module.scss';
 
 const App = () => {
-  const [ticketList, setTicketList] = useState([1, 2, 3, 4]);
-
   return (
     <div className={cl.app}>
       <header>
@@ -15,7 +11,7 @@ const App = () => {
       </header>
       <main className={cl.app__main}>
         <Filter />
-        <TicketList ticketList={ticketList} setTicketList={setTicketList} />
+        <TicketList />
       </main>
     </div>
   );

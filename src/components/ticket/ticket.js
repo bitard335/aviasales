@@ -1,8 +1,6 @@
 import cl from './ticket.module.scss';
 
 const Ticket = () => {
-  console.log(cl);
-
   return (
     <div className={cl.ticket}>
       <header className={cl.ticket__segment}>

@@ -1,6 +1,12 @@
+import { useDispatch } from 'react-redux';
+
+import { changeSort } from '../../store/reducers/ticketSlice';
+
 import cl from './tabs.module.scss';
 
 const Tabs = () => {
+  const dispatch = useDispatch();
+
   const tabs = ['самый дешевый', 'самый быстрый', 'оптимальный'];
   return (
     <ul className={cl.tabs}>
@@ -8,7 +14,7 @@ const Tabs = () => {
         return (
           <li key={index} className={cl.tabs__tab}>
             <label>
-              <input type="radio" name="filter" value={tab} />
+              <input type="radio" onClick={() => dispatch(changeSort({ tab }))} name="filter" value={tab} />
               <span>{tab}</span>
             </label>
           </li>
