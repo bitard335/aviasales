@@ -49,7 +49,7 @@ const TicketList = () => {
       {loadingPlug}
       {errorPlug}
       {elementsPlug}
-      {!isEmpty ? (
+      {!isEmpty && !isLoading ? (
         <button className={cl.ticketList__button} onClick={onClickHandler}>
           Показать еще
         </button>
