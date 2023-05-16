@@ -48,8 +48,8 @@ const TicketList = () => {
       <Tabs setMaxVisible={setMaxVisible} />
       {loadingPlug}
       {errorPlug}
-      {elementsPlug}
-      {!isEmpty && !isLoading ? (
+      {!isLoading ? elementsPlug : null}
+      {!isEmpty ? (
         <button className={cl.ticketList__button} onClick={onClickHandler}>
           Показать еще
         </button>
