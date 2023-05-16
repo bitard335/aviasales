@@ -47,10 +47,8 @@ $ticketPriceColor : rgba(33, 150, 243, 1);
   }
   &__column{
     margin-right: auto;
-    &:first-child{
+    & div:first-child{
       color: $ticketColumnHead;
     }
-  }
-  &__row{
   }
 }

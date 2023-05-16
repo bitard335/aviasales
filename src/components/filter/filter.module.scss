@@ -1,5 +1,6 @@
 $filterBackground : #FFFFFF;
 $selectedFilter : #F1FCFF;
+$checkboxColor : rgba(33, 150, 243, 1);
 
 .filter{
   box-sizing: border-box;
@@ -37,7 +38,6 @@ $selectedFilter : #F1FCFF;
   &__item{
     display: flex;
     height: 40px;
-    font-size: 14px;
     line-height: 20px;
     align-items: center;
     margin-left: -20px;
@@ -47,7 +47,28 @@ $selectedFilter : #F1FCFF;
     & label {
       display: flex;
       flex-direction: row;
+      align-items: center;
+
+      &::before {
+        position: relative;
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1.5px solid $checkboxColor;
+        border-radius: 2px;
+      }
+      &:has(input:checked)::after{
+        content: '✔';
+        margin: 5px;
+        position: absolute;
+        color: $checkboxColor
+      }
     }
+    & input {
+      display: none;
+    }
+
     &:has(input:checked){
       background-color: $selectedFilter;
     }

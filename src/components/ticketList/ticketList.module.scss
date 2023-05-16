@@ -1,3 +1,6 @@
+$buttonColor: rgba(33, 150, 243, 1);
+$buttonFontColor: #FFFFFF;
+
 .ticketList {
   display: flex;
   flex-direction: column;
@@ -6,5 +9,19 @@
 
   @media screen and (max-width: 768px) {
     width: 95%;
+  }
+
+  &__button{
+    text-transform: uppercase;
+    background-color: $buttonColor;
+    color: $buttonFontColor;
+    height: 50px;
+
+    border-radius: 5px;
+    margin-top: 20px;
+
+    @media screen and (max-width: 768px) {
+      width: 95%;
+    }
   }
 }

@@ -4,7 +4,7 @@ import { changeSort } from '../../store/reducers/ticketSlice';
 
 import cl from './tabs.module.scss';
 
-const Tabs = () => {
+const Tabs = ({ setMaxVisible }) => {
   const dispatch = useDispatch();
 
   const tabs = ['самый дешевый', 'самый быстрый', 'оптимальный'];
@@ -14,7 +14,15 @@ const Tabs = () => {
         return (
           <li key={index} className={cl.tabs__tab}>
             <label>
-              <input type="radio" onClick={() => dispatch(changeSort({ tab }))} name="filter" value={tab} />
+              <input
+                type="radio"
+                onClick={() => {
+                  dispatch(changeSort({ tab }));
+                  setMaxVisible(5);
+                }}
+                name="filter"
+                value={tab}
+              />
               <span>{tab}</span>
             </label>
           </li>
